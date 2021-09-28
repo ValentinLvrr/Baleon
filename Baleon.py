@@ -4,7 +4,6 @@ import os
 import cv2
 import qrcode
 
-
 os.system("mode 150, 50")
 os.system("title Baleon - Valentin.Lvr")
 
@@ -71,8 +70,16 @@ def main():
         print(Col.orange+"Lecture ...")
         val, points, qrcode = d.detectAndDecode(cv2.imread(name_png))
         print(Col.orange+"Valeure decodée :", Col.yellow+val)
-        input()
-        main()
+        print(Col.orange+"Entrez", Col.yellow+"copy", Col.orange+"pour copier la valeure.\n")
+        c = input(Col.orange+"Choix > "+Col.white)
+        if c == "copy":
+            import pyperclip
+            pyperclip.copy(val)
+            print(Col.yellow+"Valeure Copiée")
+            input()
+            main()
+        else:
+            main()
 
     if c == "2":
         
