@@ -1,13 +1,15 @@
-from pyfade import Fade, Colors
-from pycenter import center
-import os
-import cv2
-import qrcode
 
-os.system("mode 150, 50")
-os.system("title Baleon - Valentin.Lvr")
 
 def main():
+
+    from pyfade import Fade, Colors
+    from pycenter import center
+    import os
+    import cv2
+    import qrcode
+
+    os.system("mode 150, 50")
+    os.system("title Baleon - Valentin.Lvr")
 
     def clear():
         os.system("cls")
