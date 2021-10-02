@@ -1,5 +1,3 @@
-
-
 def main():
 
     from pyfade import Fade, Colors
